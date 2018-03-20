@@ -6,6 +6,9 @@ import {
     TouchableOpacity,
 } from 'react-native';
 
+// 页面跳转，必须先在项目根目录安装导航库 react-navigation ，如下
+// yarn add react-navigation
+
 class Main extends Component {
 
     //设置顶部导航栏的内容
