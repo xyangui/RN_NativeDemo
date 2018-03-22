@@ -5,12 +5,15 @@ import { AppRegistry } from 'react-native';
 // AppRegistry.registerComponent('ReactNativeDemo', () => App);
 
 // import apiApp from './getapi/apiApp';
-// AppRegistry.registerComponent('LoginAPI', () => apiApp);
+// AppRegistry.registerComponent('ReactNativeDemo', () => apiApp);
 
-import loginApp from './persistentlogin/loginApp';
-AppRegistry.registerComponent('LoginAPI', () => loginApp);
+// import loginApp from './persistentlogin/loginApp';
+// AppRegistry.registerComponent('ReactNativeDemo', () => loginApp);
 
-import Pagejump from './pagejump/App';
-AppRegistry.registerComponent('ReactNativeDemo', () => Pagejump);
 
+// import Pagejump from './pagejump/App';
+// AppRegistry.registerComponent('ReactNativeDemo', () => Pagejump);
+
+import TabDemo from './BottomTab/App';
+AppRegistry.registerComponent('ReactNativeDemo', () => TabDemo);
 
