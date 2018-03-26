@@ -14,3 +14,4 @@ This is a code repository about ReactNative app on ios and android
 003_TabNavigator  底部导航__官方
 004_getapi        API接口get请求
 005_persistentlogin  API接口post请求 和 本地保存
+006_ImageSpin     图片旋转

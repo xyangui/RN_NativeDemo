@@ -24,4 +24,8 @@ AppRegistry.registerComponent('ReactNativeDemo', () => Tab);
 // import loginApp from './005_persistentlogin/loginApp';
 // AppRegistry.registerComponent('ReactNativeDemo', () => loginApp);
 
+// 006_ImageSpin
+// import App from './006_ImageSpin/App';
+// AppRegistry.registerComponent('ReactNativeDemo', () => App);
+
 
