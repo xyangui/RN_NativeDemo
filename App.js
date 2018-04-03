@@ -25,7 +25,7 @@ export default class App extends Component<Props> {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to Re5555act Nat08880ve!
+          Welcome to Re5act Na8899ve!
         </Text>
         <Text style={styles.instructions}>
           To get started, edit App.js

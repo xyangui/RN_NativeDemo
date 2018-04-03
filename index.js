@@ -13,8 +13,8 @@ import { AppRegistry } from 'react-native';
 // AppRegistry.registerComponent('ReactNativeDemo', () => TabDemo);
 
 // 003_TabNavigator  底部导航__官方
-import Tab from './003_TabNavigator/App';
-AppRegistry.registerComponent('ReactNativeDemo', () => Tab);
+// import Tab from './003_TabNavigator/App';
+// AppRegistry.registerComponent('ReactNativeDemo', () => Tab);
 
 // 004_getapi     API接口get请求
 // import apiApp from './004_getapi/apiApp';
@@ -27,5 +27,23 @@ AppRegistry.registerComponent('ReactNativeDemo', () => Tab);
 // 006_ImageSpin
 // import App from './006_ImageSpin/App';
 // AppRegistry.registerComponent('ReactNativeDemo', () => App);
+
+
+
+// 007_DrawerMenu
+// import Home from './007_Swiper/App';
+
+// const AppRegistry = require('AppRegistry');
+// const RNTesterApp = require('./007_DrawerMenu/App');
+// AppRegistry.registerComponent('ReactNativeDemo', () => Home);
+
+// const AppRegistry = require('AppRegistry');
+// const App2 = require('./007_DrawerMenu/App2');
+// AppRegistry.registerComponent('ReactNativeDemo', () => App2);
+
+import App from './009_Swiper/App';
+AppRegistry.registerComponent('ReactNativeDemo', () => App);
+
+
 
 
