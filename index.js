@@ -28,20 +28,7 @@ import { AppRegistry } from 'react-native';
 // import App from './006_ImageSpin/App';
 // AppRegistry.registerComponent('ReactNativeDemo', () => App);
 
-
-
-// 007_DrawerMenu
-// import Home from './007_Swiper/App';
-
-// const AppRegistry = require('AppRegistry');
-// const RNTesterApp = require('./007_DrawerMenu/App');
-// AppRegistry.registerComponent('ReactNativeDemo', () => Home);
-
-// const AppRegistry = require('AppRegistry');
-// const App2 = require('./007_DrawerMenu/App2');
-// AppRegistry.registerComponent('ReactNativeDemo', () => App2);
-
-import App from './009_Swiper/App';
+import App from './007_Swiper/App';
 AppRegistry.registerComponent('ReactNativeDemo', () => App);
 
 
