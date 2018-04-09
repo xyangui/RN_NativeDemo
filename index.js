@@ -31,11 +31,9 @@ import { AppRegistry } from 'react-native';
 // import App from './007_Swiper/App';
 // AppRegistry.registerComponent('ReactNativeDemo', () => App);
 
-// import ParallaxScrollView from './T008_Profile/ParallaxScrollView';
-// AppRegistry.registerComponent('ReactNativeDemo', () => ParallaxScrollView);
+import ParallaxScrollView from './T008_Profile/ParallaxScrollView';
+AppRegistry.registerComponent('ReactNativeDemo', () => ParallaxScrollView);
 
-import App from './T009_login/App';
-AppRegistry.registerComponent('ReactNativeDemo', () => App);
 
 
 
