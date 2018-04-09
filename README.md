@@ -1,4 +1,4 @@
-# ReactNativeDemo
+# RN_NativeDemo
 This is a code repository about ReactNative app on ios and android
 
 使用说明：
