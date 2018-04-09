@@ -1,18 +1,16 @@
+
 import React, { Component } from 'react';
 import {
-  Text,
   View,
   Image,
   Dimensions
 } from 'react-native';
 import Swiper from 'react-native-swiper';
+
 const { width } = Dimensions.get('window');
 const loading = require('./img/loading.gif');
 
 const styles = {
-  wrapper: {
-  },
-
   slide: {
     flex: 1,
     justifyContent: 'center',
@@ -23,7 +21,6 @@ const styles = {
     flex: 1,
     backgroundColor: 'transparent'
   },
-
   loadingView: {
     position: 'absolute',
     justifyContent: 'center',
@@ -34,12 +31,11 @@ const styles = {
     bottom: 0,
     backgroundColor: 'rgba(0,0,0,.5)'
   },
-
   loadingImage: {
     width: 60,
     height: 60
   }
-}
+};
 
 const Slide = props => {
   return (<View style={styles.slide}>
@@ -50,11 +46,11 @@ const Slide = props => {
       </View>
     }
   </View>)
-}
+};
 
 export default class Test extends Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = {
       imgList: [
         'http://empirecollege.net/pics/1.jpg',
@@ -63,20 +59,22 @@ export default class Test extends Component {
         'http://empirecollege.net/pics/4.jpg'
       ],
       loadQueue: [0, 0, 0, 0]
-    }
-    this.loadHandle = this.loadHandle.bind(this)
+    };
+    this.loadHandle = this.loadHandle.bind(this);
   }
+
   loadHandle (i) {
-    let loadQueue = this.state.loadQueue
-    loadQueue[i] = 1
+    let loadQueue = this.state.loadQueue;
+    loadQueue[i] = 1;
     this.setState({
       loadQueue
-    })
+    });
   }
+
   render () {
     return (
         <View style={{flex: 1}}>
-          <Swiper loadMinimal loadMinimalSize={1} style={styles.wrapper}  autoplay>
+          <Swiper loadMinimal loadMinimalSize={1} style={{flex: 1}}  autoplay>
             {
               this.state.imgList.map((item, i) => <Slide
                   loadHandle={this.loadHandle}
@@ -87,13 +85,10 @@ export default class Test extends Component {
             }
           </Swiper>
 
-          <View height={340}>
+          <View style={{flex: 1}}>
 
           </View>
 
-          {/*<View>*/}
-            {/*<Text>Current Loaded Images: {this.state.loadQueue}</Text>*/}
-          {/*</View>*/}
         </View>
     )
   }
