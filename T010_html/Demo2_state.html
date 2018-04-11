@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>菜鸟教程 React 实例</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+
+<div id="example"></div>
+
+<div id="message"></div>
+
+<script type="text/babel">
+
+    //定义类
+    var LikeButton = React.createClass({
+
+        //只执行一次，然后执行 render: function() {
+        getInitialState: function() {
+            return {liked: false};  //liked，可以随便命名
+        },                          //两个状态用，分割如：liked: false,lastGistUrl: ''
+
+        //每次点击时执行，然后执行 render: function() {
+        handleClick2: function(event) {
+            this.setState({liked: !this.state.liked});
+        },
+        render: function() {
+            var text = this.state.liked ? '喜欢' : '不喜欢';
+            return (
+                <p onClick={this.handleClick2}>
+                    你<b>{text}</b>我。点我切换状态。
+                </p>
+            );
+        }
+    });
+
+    ReactDOM.render(
+        <LikeButton />, //实例化类，生成对象
+        document.getElementById('example')
+    );
+
+    //计数器
+    var Counter = React.createClass({
+        getInitialState: function () {
+            return { clickCount: 0 };  //clickCount，可以随便命名
+        },
+        handleClick: function () {
+            this.setState(function(state) {  //setState是React事件处理函数中和请求回调函数中触发UI更新的主要方法。
+                return {clickCount: state.clickCount + 1};
+            });
+        },
+        render: function () {
+            return (<h2 onClick={this.handleClick}>点我！点击次数为: {this.state.clickCount}</h2>);
+        }
+    });
+    ReactDOM.render(
+        <Counter />,
+        document.getElementById('message')
+    );
+
+</script>
+</body>
+</html>

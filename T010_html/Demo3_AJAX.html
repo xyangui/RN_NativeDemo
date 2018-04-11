@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>菜鸟教程 React 实例</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    var UserGist = React.createClass({
+
+        getInitialState: () =>
+            ({
+                username: '',
+                lastGistUrl: ''
+            }),
+
+        componentDidMount: function() { //不知道为什么改成箭头函数报错
+
+            //网络请求
+            this.serverRequest = $.get(this.props.source, function (result) {
+
+                var lastGist = result[0];//返回对象数组
+                this.setState({
+                    username: lastGist.owner.login, //状态改变，更新UI
+                    lastGistUrl: lastGist.html_url
+                });
+            }.bind(this));
+        },
+
+        componentWillUnmount: () => this.serverRequest.abort(),
+
+        render: function() {  //不知道为什么改成箭头函数报错
+            return (
+                <div>
+                    {this.state.username} 用户最新的 Gist 共享地址：
+                    <a href={this.state.lastGistUrl}>{this.state.lastGistUrl}</a>
+                </div>
+            );
+        }
+    });
+
+    ReactDOM.render(
+        <UserGist source="https://api.github.com/users/octocat/gists" />,
+        document.getElementById('example')
+    );
+</script>
+</body>
+</html>

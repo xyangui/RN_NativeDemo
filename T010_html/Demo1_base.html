@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+
+<div id="example_base"></div>
+
+<div id="example_component"></div>
+
+<div id="example_component_para"></div>
+
+<div id="example4"></div>
+
+<script type="text/babel" src="classes.js"></script>
+
+<script>
+
+    var dd4 = 33;
+    var ff4 = 55;
+
+</script>
+
+<script type="text/babel">
+
+    //基本用法
+    ReactDOM.render(
+        <h1>Hello, example_base!</h1>,
+        document.getElementById('example_base')
+    );
+
+    //组件可以复用---组件可以放在js文件里
+    ReactDOM.render(
+        <HelloMessage />,
+        document.getElementById('example_component')
+    );
+
+    //向组件传递参数
+    ReactDOM.render(
+        <ComponentPara nam="ComponentPara_xyg" />,  //nam是参数名
+        document.getElementById('example_component_para')
+    );
+
+
+    //多个组件合成一个组件
+    var WebSite = React.createClass({
+        render: function() {
+            return (
+                <div>
+                    {/*注释需要写在花括号中*/}
+                    <Name name222={this.props.name111} />
+                    <Link site222={this.props.site111} />
+                </div>
+            );
+        }
+    });
+
+    var Name = React.createClass({
+        render: function() {
+            return (
+                <h1>{this.props.name222}</h1>//name222是参数名
+            );
+        }
+    });
+
+    var Link = React.createClass({
+        render: function() {
+            return (
+                <a href={this.props.site222}>
+                    {this.props.site222}
+                </a>
+            );
+        }
+    });
+
+    //多个组件合成一个组件， ReactDOM.render( 必须在组件之后定义
+    ReactDOM.render(
+        <WebSite name111="菜鸟教程" site111="http://www.runoob.com" />, //name111是参数名
+        document.getElementById('example4')
+    );
+
+</script>
+</body>
+</html>
