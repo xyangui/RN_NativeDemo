@@ -1,10 +1,10 @@
 
-jest.dontMock('../T009_Test/httprequest');
+jest.dontMock('../T009_fetch_Test/httprequest');
 
 describe('httprequest', function() {
   it('adds 1 + 2 to equal 3', function() {
 
-    var httprequest = require('../T009_Test/httprequest');
+    var httprequest = require('../T009_fetch_Test/httprequest');
 
     expect(httprequest(1, 2)).toBe(3);
   });

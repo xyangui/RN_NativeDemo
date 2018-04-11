@@ -34,7 +34,7 @@ import { AppRegistry } from 'react-native';
 // import ParallaxScrollView from './T008_Profile/ParallaxScrollView';
 // AppRegistry.registerComponent('ReactNativeDemo', () => ParallaxScrollView);
 
-import UnitTest from './T009_Test/App';
+import UnitTest from './T009_fetch_Test/App';
 AppRegistry.registerComponent('ReactNativeDemo', () => UnitTest);
 
 
