@@ -1,12 +1,16 @@
 /**
+ * 封装网络请求 fetch ，还可以加上超时处理，参考地址：
+ * https://juejin.im/entry/590fe17b1b69e6006854987b
+ */
+const common_url = 'http://empirecollege.net/Education/public/api';  //服务器地址
+let token = '';
+
+/**
  * @param {string} url 接口地址
  * @param {string} method 请求方法：GET、POST，只能大写
  * @param {JSON} [params=''] body的请求参数，默认为空
  * @return 返回Promise
  */
-const common_url = 'http://empirecollege.net/Education/public/api';  //服务器地址
-let token = '';
-
 function fetchRequest(url, method, params = ''){
 
   let header = {
